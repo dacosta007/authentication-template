@@ -1,62 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<main class="auth-wrapper bg-white">
+  <section class="auth-container">
+    <header class="auth-header center-text">
+      <div class="icon-crest bg-pry center-text">
+        <i class="ti ti-github"></i>
+      </div>
+      <h2 class="auth-title">register</h2>
+    </header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Register For An Account</title>
-  <!-- Themify icons fonts -->
-  <link rel="stylesheet" href="../public/css/themify-icons.css">
-  <!-- main style -->
-  <link rel="stylesheet" href="../public/css/main.css">
-</head>
-
-<body>
-  <main class="auth-wrapper bg-white">
-    <section class="auth-container">
-      <header class="auth-header center-text">
-        <div class="icon-crest bg-pry center-text">
-          <i class="ti ti-github"></i>
+    <section>
+      <form action="#" method="POST">
+        <div class="input-field">
+          <label for="email">email</label>
+          <input type="email" name="email" placeholder="jondoe@example.com" required>
+          <span data-error-email></span>
         </div>
-        <h2 class="auth-title">register</h2>
-      </header>
+        <div class="input-field">
+          <label for="password">password</label>
+          <input type="password" name="password" placeholder="Password" required>
+          <span data-error-pwd></span>
+        </div>
+        <div class="input-field">
+          <label for="password">re-enter password</label>
+          <input type="password" name="password" placeholder="Confirm Password" required>
+          <span data-error-pwd></span>
+        </div>
 
-      <section>
-        <form action="#" method="POST">
-          <div class="input-field">
-            <label for="email">email</label>
-            <input type="email" name="email" placeholder="jondoe@example.com" required>
-            <span data-error-email></span>
-          </div>
-          <div class="input-field">
-            <label for="password">password</label>
-            <input type="password" name="password" placeholder="Password" required>
-            <span data-error-pwd></span>
-          </div>
-          <div class="input-field">
-            <label for="password">re-enter password</label>
-            <input type="password" name="password" placeholder="Confirm Password" required>
-            <span data-error-pwd></span>
-          </div>
+        <div class="input-field" style="margin-top: 1.5rem;">
+          <button type="button" class="btn btn-pry btn-block" data-login-btn>
+            Register
+          </button>
+        </div>
+      </form>
 
-          <div class="input-field" style="margin-top: 1.5rem;">
-            <button type="button" class="btn btn-pry btn-block" data-login-btn>
-              Register
-            </button>
-          </div>
-        </form>
-
-        <footer class="center-text" style="margin-top: 1.5rem;">
-          Have an account? <a style="padding: 0.4rem; font-weight: bold;" href="/users/login">Login</a>
-        </footer>
-      </section>
+      <footer class="center-text" style="margin-top: 1.5rem;">
+        Have an account? <a style="padding: 0.4rem; font-weight: bold;" href="/users/login">Login</a>
+      </footer>
     </section>
+  </section>
 
-  </main>
-
-  <!-- javaScript files -->
-  <script src="../public/js/main.js"></script>
-</body>
-
-</html>
+</main>

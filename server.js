@@ -11,12 +11,12 @@ dotenv.config({
 
 const app = express();
 
+// Set static folder (for client-side js, css, img, etc)
+app.use(express.static(path.join(__dirname, 'public')));
+
 // setting EJS as templating language
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
-
-// Set static folder (for client-side js, css, img, etc)
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes middleswares (for cleaner hamdling of routes)
 app.use('/', require('./routes/index'));
