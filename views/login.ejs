@@ -1,0 +1,42 @@
+<main class="auth-wrapper bg-white">
+  <section class="auth-container">
+    <header class="auth-header center-text">
+      <div class="icon-crest bg-pry center-text">
+        <i class="ti ti-github"></i>
+      </div>
+      <h2 class="auth-title">admin login</h2>
+    </header>
+
+    <section>
+      <form action="#" method="POST">
+        <div class="input-field">
+          <label for="email">email</label>
+          <input type="email" name="email" placeholder="jondoe@example.com" required>
+          <span data-error-email></span>
+        </div>
+        <div class="input-field">
+          <label for="password">password</label>
+          <input type="password" name="password" placeholder="........" required>
+          <span data-error-pwd></span>
+        </div>
+        <div class="input-field chkbox-field">
+          <span>
+            Show password <input type="checkbox" data-check-pwd>
+          </span>
+          <a href="#">Forget password?</a>
+        </div>
+
+        <div class="input-field">
+          <button type="button" class="btn btn-pry btn-block" data-login-btn>
+            login
+          </button>
+        </div>
+      </form>
+
+      <footer class="center-text" style="margin-top: 1.5rem;">
+        New user? <a style="padding: 0.4rem; font-weight: bold;" href="/users/signup">Sign up</a>
+      </footer>
+    </section>
+  </section>
+
+</main>

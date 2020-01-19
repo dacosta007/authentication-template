@@ -1,0 +1,111 @@
+.btn {
+  border: none;
+  outline: none;
+  padding: 1rem 0.8rem;
+  background: #e9e9e9;
+  border-radius: 1px;
+  font-size: 15px;
+  font-family: Montserrat;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    @include easeOut;
+    opacity: 0.8;
+  }
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-pry {
+  background: $pry-color;
+  color: $white-color;
+}
+
+.btn-secondary {
+  background: $secondary-color;
+  color: $white-color;
+}
+
+.btn-success {
+  background: $success-color;
+  color: $white-color;
+}
+
+.btn-warning {
+  background: $warning-color;
+  color: $white-color;
+}
+
+.btn-danger {
+  background: $danger-color;
+  color: $white-color;
+}
+
+// outline btn
+.btn-outline {
+  border: 2px solid #d9d0d0;
+  outline: none;
+  padding: 1rem 0.8rem;
+  background: transparent;
+  color: #333;
+  border-radius: 1px;
+  font-size: 15px;
+  font-family: Montserrat;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    @include easeOut;
+    background: #e9e9e9;
+  }
+}
+
+.btn-outline-pry {
+  border: 2px solid $pry-color;
+}
+
+.btn-outline-secondary {
+  border: 2px solid $secondary-color;
+}
+
+.btn-outline-success {
+  border: 2px solid $success-color;
+}
+
+.btn-outline-warning {
+  border: 2px solid $warning-color;
+}
+
+.btn-outline-danger {
+  border: 2px solid $danger-color;
+}
+
+.btn-outline-pry:hover {
+  background: $pry-color;
+  color: $white-color;
+}
+
+.btn-outline-secondary:hover {
+  background: $secondary-color;
+  color: $white-color;
+}
+
+.btn-outline-success:hover {
+  background: $success-color;
+  color: $white-color;
+}
+
+.btn-outline-warning:hover {
+  background: $warning-color;
+  color: $white-color;
+}
+
+.btn-outline-danger:hover {
+  background: $danger-color;
+  color: $white-color;
+}

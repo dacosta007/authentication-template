@@ -1,0 +1,43 @@
+.input-field {
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    margin-bottom: -4px;
+    text-transform: capitalize;
+    color: $black-color;
+    font-weight: bold;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 1.2rem 0rem;
+    border: none;
+    border-bottom: 1.5px solid #bf9c9c;
+    outline: none;
+    font-size: 16px;
+    color: #444;
+  }
+
+  input[type="password"] {
+    letter-spacing: 1.2px;
+  }
+
+  input[type="checkbox"] {
+    width: inherit;
+  }
+}
+
+.chkbox-field {
+  font-family: Montserrat;
+  font-size: 14px;
+
+  a {
+    display: block;
+    float: right;
+    text-decoration: none;
+    color: $secondary-color;
+  }
+}

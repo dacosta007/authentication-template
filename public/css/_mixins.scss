@@ -1,0 +1,32 @@
+@mixin easeOut {
+  transition: all 1s ease-out;
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    // when use in another file anything added will replace the @content directive
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    // when use in another file anything added will replace the @content directive
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    // when use in another file anything added will replace the @content directive
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    // when use in another file anything added will replace the @content directive
+    @content;
+  }
+}
