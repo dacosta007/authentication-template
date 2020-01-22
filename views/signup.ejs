@@ -8,25 +8,30 @@
     </header>
 
     <section>
-      <form action="#" method="POST">
+      <form action="/users/signup" method="POST">
+        <% include ./partials/messages %>
+        <input type="hidden" name="name" value=" admin">
         <div class="input-field">
           <label for="email">email</label>
-          <input type="email" name="email" placeholder="jondoe@example.com" required>
+          <input type="email" name="email" placeholder="jondoe@example.com"
+            value="<%= typeof email != 'undefined' ? email : '' %>" required>
           <span data-error-email></span>
         </div>
         <div class="input-field">
           <label for="password">password</label>
-          <input type="password" name="password" placeholder="Password" required>
+          <input type="password" name="password" placeholder="Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>" required>
           <span data-error-pwd></span>
         </div>
         <div class="input-field">
           <label for="password">re-enter password</label>
-          <input type="password" name="password" placeholder="Confirm Password" required>
+          <input type="password" name="rePassword" placeholder="Confirm Password"
+            value="<%= typeof rePassword != 'undefined' ? rePassword : '' %>" required>
           <span data-error-pwd></span>
         </div>
 
         <div class="input-field" style="margin-top: 1.5rem;">
-          <button type="button" class="btn btn-pry btn-block" data-login-btn>
+          <button type="submit" class="btn btn-pry btn-block" data-login-btn>
             Register
           </button>
         </div>

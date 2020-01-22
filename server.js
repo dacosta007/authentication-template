@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
-const ejs = require('ejs');
+const connectDB = require('./config/db');
 
 // configuration of enviromental variables
 dotenv.config({
@@ -11,12 +11,20 @@ dotenv.config({
 
 const app = express();
 
+// DB Connection
+connectDB();
+
 // Set static folder (for client-side js, css, img, etc)
 app.use(express.static(path.join(__dirname, 'public')));
 
 // setting EJS as templating language
-app.set('view engine', 'ejs');
 app.use(expressLayouts);
+app.set('view engine', 'ejs');
+
+// to get form data (using req.body) bodyParser middleware
+app.use(express.urlencoded({
+  extended: false
+}));
 
 // Routes middleswares (for cleaner hamdling of routes)
 app.use('/', require('./routes/index'));
