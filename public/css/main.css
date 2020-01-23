@@ -327,6 +327,51 @@ a {
   color: #fff;
 }
 
+.alert {
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  opacity: 1;
+  -webkit-transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.alert-pry {
+  background: #4343cc;
+}
+
+.alert-secondry {
+  background: #161640;
+}
+
+.alert-success {
+  background: #47cc43;
+}
+
+.alert-warning {
+  background: #dbc23a;
+}
+
+.alert-danger {
+  background: #db673a;
+}
+
+.close-alert-btn {
+  margin-left: 15px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  float: right;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.close-alert-btn:hover {
+  color: #000;
+}
+
 @media screen and (max-width: 500px) {
   .auth-container {
     width: 310px;

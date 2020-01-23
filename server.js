@@ -1,7 +1,11 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const flash = require('connect-flash');
+const session = require('express-session');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
+const passport = require('passport');
+
 const connectDB = require('./config/db');
 
 // configuration of enviromental variables
@@ -10,6 +14,9 @@ dotenv.config({
 });
 
 const app = express();
+
+// Passport config
+require('./config/passport')(passport);
 
 // DB Connection
 connectDB();
@@ -25,6 +32,28 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({
   extended: false
 }));
+
+// Express Session middleware
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
+}));
+
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Connect flash middleware (for showing flash messages)
+app.use(flash());
+
+// Global vars
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();
+});
 
 // Routes middleswares (for cleaner hamdling of routes)
 app.use('/', require('./routes/index'));

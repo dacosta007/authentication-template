@@ -1,5 +1,49 @@
+<!-- Error messages on signup page -->
 <% if(typeof errors != 'undefined') { %>
 <% errors.forEach(function(error) { %>
-<%= error.msg %>
+<div class="alert alert-danger">
+  <span class="close-alert-btn">
+    <i class="ti ti-close"></i>
+  </span>
+  <strong>
+    <%= error.msg %>
+  </strong>
+</div>
 <% }); %>
+<% } %>
+
+<!-- success message for login after registration -->
+<% if (success_msg != '') { %>
+<div class="alert alert-success">
+  <span class="close-alert-btn">
+    <i class="ti ti-close"></i>
+  </span>
+  <strong>
+    <%= success_msg %>
+  </strong>
+</div>
+<% } %>
+
+<!-- error message on registration -->
+<% if (error_msg != '') { %>
+<div class="alert alert-warning">
+  <span class="close-alert-btn">
+    <i class="ti ti-close"></i>
+  </span>
+  <strong>
+    <%= error_msg %>
+  </strong>
+</div>
+<% } %>
+
+<!-- error message on login page -->
+<% if (error != '') { %>
+<div class="alert alert-warning">
+  <span class="close-alert-btn">
+    <i class="ti ti-close"></i>
+  </span>
+  <strong>
+    <%= error %>
+  </strong>
+</div>
 <% } %>

@@ -1,0 +1,42 @@
+.alert {
+  padding: 20px;
+  color: $white-color;
+  margin-bottom: 0.6rem;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.alert-pry {
+  background: $pry-color;
+}
+
+.alert-secondry {
+  background: $secondary-color;
+}
+
+.alert-success {
+  background: $success-color;
+}
+
+.alert-warning {
+  background: $warning-color;
+}
+
+.alert-danger {
+  background: $danger-color;
+}
+
+.close-alert-btn {
+  margin-left: 15px;
+  color: $white-color;
+  font-weight: bold;
+  font-size: 22px;
+  float: right;
+  line-height: 20px;
+  cursor: pointer;
+  @include easeOut();
+}
+
+.close-alert-btn:hover {
+  color: $black-color;
+}
