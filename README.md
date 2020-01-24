@@ -1,8 +1,12 @@
 # Authentication Template
 
 An authentication template using nodejs, express, and passport. Using passport local-strategy, it serves as a boilerplate
-<<<<<<< HEAD
 for speeding up an application development in need of authentication and validation.
-=======
-for speeding up an application development in need of authentication and validation.
->>>>>>> 34e4ae8645db4453b6274cfa3a62ebca9d453720
+
+## Usage
+
+In other to enhance it to suite your project, the **User.js** model can be upgraded or updated for more fields to fit such project.
+
+## Note
+
+For **DataBase** configuration, the **config/config.js** file should be updated to the database string URI
